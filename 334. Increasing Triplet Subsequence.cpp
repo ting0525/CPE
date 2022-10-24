@@ -1,22 +1,25 @@
-class Solution {
-public:
-    bool increasingTriplet(vector<int>& nums) {
-        int len = nums.size();
-        if (len < 3)       //長度小於三不符題意 
-            return false;
-
-        int first = INT_MAX;
-        int second = INT_MAX;
-        
-        for (int i = 0; i < len; ++i){
-            if (first >= nums[i])    //順著找最小的數 
-                first = nums[i];
-            else if (second >= nums[i]) //順著找第二小的數 
-                second = nums[i];
-            else                 //順著找第三小的數 
-                return true;
-        }
-        
-        return false;
-    }
-};
+#include<iostream>
+#include<vector>
+using namespace std;
+int main(){
+	int t;
+	int nums,tmp,Case=1;
+	cin>>t;
+	while(t--){
+		int high=0,low=0;
+		vector<int> v;
+		cin>>nums;
+		for(int i=0;i<nums;i++){
+			cin>>tmp;
+			v.push_back(tmp);
+		}
+		for(int i=0;i<v.size()-1;i++){
+			if(v[i]<v[i+1])
+				high++;
+			else if(v[i]>v[i+1]){
+				low++;
+			}
+		}
+		printf("Case %d: %d %d\n" , Case++ ,high ,low);
+	}
+} 
