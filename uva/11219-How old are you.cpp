@@ -16,7 +16,6 @@ int main() {
         cin >> s1 >> s2;
         int dd1 = str2int(s1, 0, 2) + str2int(s1, 3, 2) * 31 + str2int(s1, 6, 4) * 400;
         int dd2 = str2int(s2, 0, 2) + str2int(s2, 3, 2) * 31 + str2int(s2, 6, 4) * 400;
-         
         if (dd1 < dd2) cout << "Case #" << Case << ": Invalid birth date\n";
         else if ((dd1 - dd2) / 400 > 130) cout << "Case #" << Case << ": Check birth date\n";
         else cout << "Case #" << Case << ": " << (dd1 - dd2) / 400 << "\n";
