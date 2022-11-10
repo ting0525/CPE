@@ -8,13 +8,13 @@ int main() {
         int ans = 720; //順時鐘方向轉轉盤2整圈
         
         ans += ((40 + n0 - n1) % 40) * 9;  //繼續順時鐘方向轉直到到達第一個號碼上
-        cout<<ans<<endl;
+        //cout<<ans<<endl;
         
         ans += 360; //逆時鐘方向轉轉盤一整圈
-        cout<<ans<<endl;
+        //cout<<ans<<endl;
         
 		ans += ((40 + n2 - n1) % 40) * 9;  //繼續逆時鐘方向轉直到到達第二個號碼
-        cout<<ans<<endl;
+        //cout<<ans<<endl;
         
 		ans += ((40 + n2 - n3) % 40) * 9;  //順時鐘方向轉轉盤直到到達第三個號碼
         cout << ans << "\n";
