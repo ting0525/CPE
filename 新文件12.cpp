@@ -9,10 +9,10 @@ int main(){
 		for(int i=0;i<t;i++){
 			cin>>x[i];
 		} 
-		//cout<<"1111111";
+		cout<<"1111111";
 		for(int i=1;i<t;i++){
 			ans[abs(x[i]-x[i-1])]=1;
-			//cout<<abs(x[i]-x[i-1])<<endl;
+			cout<<abs(x[i]-x[i-1])<<endl;
 		}
 		for(int i=1;i<=t;i++){
 			if(ans[i]==0){
