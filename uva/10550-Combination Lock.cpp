@@ -1,22 +1,11 @@
-#include <iostream>
+#include<bits/stdc++.h>
 using namespace std;
- 
-int main() {
-    int n0, n1, n2, n3;//注意試表在動不是時針 
-    while (cin >> n0 >> n1 >> n2 >> n3){
-        if (n0 == 0 && n1 == 0 && n2 == 0 && n3 == 0) break;
-        int ans = 720; //順時鐘方向轉轉盤2整圈
-        
-        ans += ((40 + n0 - n1) % 40) * 9;  //繼續順時鐘方向轉直到到達第一個號碼上
-        //cout<<ans<<endl;
-        
-        ans += 360; //逆時鐘方向轉轉盤一整圈
-        //cout<<ans<<endl;
-        
-		ans += ((40 + n2 - n1) % 40) * 9;  //繼續逆時鐘方向轉直到到達第二個號碼
-        //cout<<ans<<endl;
-        
-		ans += ((40 + n2 - n3) % 40) * 9;  //順時鐘方向轉轉盤直到到達第三個號碼
-        cout << ans << "\n";
-    }
+
+int main(){
+	int start, one, two, three;
+	while(cin >> start >> one >> two >> three && (start || one || two ||three)){
+		int angle = 0;
+		angle = 120+(40+start-one)%40+(40+two-one)%40+(40+two-three)%40;
+		cout << angle*9 << endl;
+	}
 }
