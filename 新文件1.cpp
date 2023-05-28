@@ -5,13 +5,12 @@ int array[6] = { 5, 3, 1, 2, 6, 4 };
 
 void PrintArray(int *arr, int size){
     for (int i = 0; i < size; i++) {
-        std::cout << arr[i] << " ";
+        cout << arr[i] << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
 }
 
 void InsertionSort(int *arr, int size){
-
     for (int i = 1; i < size; i++) {
         int key = arr[i];
         int j = i - 1;
@@ -26,12 +25,12 @@ void InsertionSort(int *arr, int size){
 
 int main() {
 
-    std::cout << "original:\n";
+    cout << "original:\n";
     PrintArray(array, 6);
 
     InsertionSort(array, 6);
 
-    std::cout << "sorted:\n";
+    cout << "sorted:\n";
     PrintArray(array, 6);
     return 0;
 }
