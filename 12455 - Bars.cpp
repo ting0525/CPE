@@ -11,8 +11,10 @@ int main(){
         for(int i = 0; i < num; i++){
             cin >> p;
             for(int j = target-p; j >= 0; j--){
-                if(dp[j] && !dp[j+p])
+                if(dp[j] && !dp[j+p]){
+                	cout << j+p << endl; 
                     dp[j+p] = 1;
+				}	
             }
         }
         if(dp[target]) cout << "YES\n";
